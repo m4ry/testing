@@ -1,4 +1,4 @@
-set :application, "m.xn--ycee.net"
+set :application, "x.xn--ycee.net"
 set :repository,  "git@github.com:m4ry/testing.git"
 set :scm, :git
 set :branch, 'master'
@@ -6,7 +6,7 @@ set :git_shallow_clone, 1
 set :deploy_via, :remote_cache
 set :copy_compression, :bz2
 set :rails_env, 'production'
-set :deploy_to, "/home/webghostingshell/#{application}"
+set :deploy_to, "/home/m4shell/#{application}"
 ssh_options[:forward_agent] = true
 
 

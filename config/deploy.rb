@@ -7,6 +7,9 @@ set :deploy_via, :remote_cache
 set :copy_compression, :bz2
 set :rails_env, 'production'
 set :deploy_to, "/home/webghostingshell/#{application}"
+ssh_options[:forward_agent] = true
+
+
 
 role :web, "#{application}"                          # Your HTTP server, Apache/etc
 role :app, "#{application}"                          # This may be the same as your `Web` server

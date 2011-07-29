@@ -18,6 +18,21 @@ role :web, domain
 role :app, domain
 role :db,  domain, :primary => true
 
+
+
+
+require "bundler/capistrano"   # To pull in the Bundler Cap task
+require "rvm/capistrano"
+
+
+
+
+
+
+
+
+
+
 # deploy config
 set :deploy_to, applicationdir
 set :deploy_via, :export

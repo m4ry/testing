@@ -1,4 +1,5 @@
 default_run_options[:pty] = true  
+ssh_options[:forward_agent] = true
 
 set :user, 'm4shell'  # Your dreamhost account's username
 set :domain, 'x.xn--ycee.net'  # Dreamhost servername where your account is located 

@@ -1,7 +1,7 @@
 set :user, 'm4shell'  # Your dreamhost account's username
-set :domain, 'x.xn--ycee.net'  # Dreamhost servername where your account is located 
+set :domain, 'www.x.xn--ycee.net'  # Dreamhost servername where your account is located 
 set :project, 'testing'  # Your application as its called in the repository
-set :application, 'x.xn--ycee.net'  # Your app's location (domain or sub-domain name as setup in panel)
+set :application, 'www.x.xn--ycee.net'  # Your app's location (domain or sub-domain name as setup in panel)
 set :applicationdir, "/home/#{user}/#{application}"  # The standard Dreamhost setup
 
 default_run_options[:pty] = true  # Must be set for the password prompt from git to work

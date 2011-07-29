@@ -1,8 +1,4 @@
 
-require "bundler/capistrano"   # To pull in the Bundler Cap task
-
-
-
 default_run_options[:pty] = true  
 ssh_options[:forward_agent] = true
 

@@ -1,4 +1,4 @@
-set :application, "x.xn--ycee.net"
+set :application, "www.x.xn--ycee.net"
 set :repository,  "git@github.com:m4ry/testing.git"
 set :scm, :git
 set :branch, 'master'

@@ -1,5 +1,5 @@
 set :user, 'm4shell'  # Your dreamhost account's username
-set :domain, 'ns1.dreamhost.com'  # Dreamhost servername where your account is located 
+set :domain, 'www.x.xn--ycee.net'  # Dreamhost servername where your account is located 
 set :project, 'testing'  # Your application as its called in the repository
 set :application, 'www.x.xn--ycee.net'  # Your app's location (domain or sub-domain name as setup in panel)
 set :applicationdir, "/home/#{user}/#{application}"  # The standard Dreamhost setup

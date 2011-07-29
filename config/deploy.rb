@@ -26,13 +26,6 @@ role :db,  domain, :primary => true
 
 
 
-
-
-
-
-
-
-
 # deploy config
 set :deploy_to, applicationdir
 set :deploy_via, :export

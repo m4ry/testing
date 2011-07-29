@@ -7,8 +7,6 @@ set :applicationdir, "/home/#{user}/#{application}"  # The standard Dreamhost se
 default_run_options[:pty] = true  # Must be set for the password prompt from git to work
 set :repository, "git@github.com:m4ry/testing.git"  # Your clone URL
 set :scm, "git"
-set :user, "m4ry"  # The server's user for deploys
-set :scm_passphrase, "penroad86"  # The deploy user's password
 
 
 

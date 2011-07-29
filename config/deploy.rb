@@ -22,7 +22,6 @@ role :db,  domain, :primary => true
 
 
 require "bundler/capistrano"   # To pull in the Bundler Cap task
-require "rvm/capistrano"
 
 
 

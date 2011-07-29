@@ -22,7 +22,7 @@ role :db,  domain, :primary => true
 
 
 require "bundler/capistrano"   # To pull in the Bundler Cap task
-
+set :rvm_type, :system
 # Add RVM's lib directory to the load path.
 $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 

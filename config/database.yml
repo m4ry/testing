@@ -22,4 +22,5 @@ production:
   database: db_x_xn_ycee
   pool: 5
   username: dbm4shell
+  password: dbdbdbm4shell
   host: mysql.x.xn--ycee.net

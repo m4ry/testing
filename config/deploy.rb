@@ -11,6 +11,7 @@ set :applicationdir, "/home/#{user}/#{application}"  # The standard Dreamhost se
 set :repository, "git@github.com:m4ry/testing.git"  # Your clone URL
 set :scm, "git"
 
+set :rails_env,      "production" 
 
 ssh_options[:auth_methods]
 

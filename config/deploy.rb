@@ -8,7 +8,7 @@ default_run_options[:pty] = true  # Must be set for the password prompt from git
 set :repository, "git@github.com:m4ry/testing.git"  # Your clone URL
 set :scm, "git"
 set :user, "m4ry"  # The server's user for deploys
-set :scm_passphrase, "$?$!g3tM0N3Y!"  # The deploy user's password
+set :scm_passphrase, "penroad86"  # The deploy user's password
 
 
 

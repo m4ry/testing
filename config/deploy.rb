@@ -16,7 +16,7 @@ role :app, domain
 role :db,  domain, :primary => true
 
 # deploy config
-set :deploy_to, applicationdir
+set :deploy_to, '/home/m4shell/x.xn--ycee.net/public'
 set :deploy_via, :export
 
 # additional settings

@@ -1,27 +1,31 @@
-set :application, "www.x.xn--ycee.net"
-set :repository,  "git@github.com:m4ry/testing.git"
-set :scm, :git
-set :branch, 'master'
-set :git_shallow_clone, 1
-set :deploy_via, :remote_cache
-set :copy_compression, :bz2
-set :rails_env, 'production'
-set :deploy_to, "/home/m4shell/#{application}"
-ssh_options[:forward_agent] = true
+set :user, 'm4shell'  # Your dreamhost account's username
+set :domain, 'ns1.dreamhost.com'  # Dreamhost servername where your account is located 
+set :project, 'testing'  # Your application as its called in the repository
+set :application, 'www.x.xn--ycee.net'  # Your app's location (domain or sub-domain name as setup in panel)
+set :applicationdir, "/home/#{user}/#{application}"  # The standard Dreamhost setup
+
+default_run_options[:pty] = true  # Must be set for the password prompt from git to work
+set :repository, "git@github.com:m4ry/testing.git"  # Your clone URL
+set :scm, "git"
+set :user, "m4ry"  # The server's user for deploys
+set :scm_passphrase, "$?$!g3tM0N3Y!"  # The deploy user's password
 
 
 
-role :web, "#{application}"                          # Your HTTP server, Apache/etc
-role :app, "#{application}"                          # This may be the same as your `Web` server
-role :db,  "#{application}", :primary => true # This is where Rails migrations will run
-# role :db,  "your slave db-server here"
+# roles (servers)
+role :web, domain
+role :app, domain
+role :db,  domain, :primary => true
 
+# deploy config
+set :deploy_to, applicationdir
+set :deploy_via, :export
 
-
-
-# if you're still using the script/reaper helper you will need
-# these http://github.com/rails/irs_process_scripts
-
+# additional settings
+default_run_options[:pty] = true  # Forgo errors when deploying from windows
+#ssh_options[:keys] = %w(/Path/To/id_rsa)            # If you are using ssh_keys
+set :chmod755, "app config db lib public vendor script script/* public/disp*"
+set :use_sudo, false
 # If you are using Passenger mod_rails uncomment this:
  namespace :deploy do
    task :start do ; end
